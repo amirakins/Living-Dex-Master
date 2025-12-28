@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import logo from '../assets/living-dex-master.png';
+import { apiUrl } from "../apiUrl.js";
 
 const Register = ({ registerUser }) => {
   const [username, setUsername] = useState("");
@@ -9,7 +10,7 @@ const Register = ({ registerUser }) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const apiUrl = 'http://localhost:5000/api';
+//  const apiUrl = 'http://localhost:5000/api';
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
